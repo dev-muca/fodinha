@@ -1,9 +1,9 @@
-import { GrFormAdd, GrFormSubtract } from "react-icons/gr";
 import { FaHandHoldingHeart, FaUserAltSlash } from "react-icons/fa";
+import { GrFormAdd, GrFormSubtract } from "react-icons/gr";
 
-import Button from "../UI/Button";
-import { useContext } from "react";
 import { GameContext } from "@/context/GameContext";
+import { useContext } from "react";
+import Button from "../UI/Button";
 
 export default function Footer() {
   const {

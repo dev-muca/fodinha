@@ -15,9 +15,7 @@ interface GameProviderProps {
 
 interface GameContextProps {
   players: Player[];
-  playerName: string;
   initialLifes: number;
-  setPlayerName: Dispatch<SetStateAction<string>>;
   setInitialLifes: Dispatch<SetStateAction<number>>;
   includePlayer: ({ name, lifes }: Player) => void;
   increaseInitialLifes: () => void;
@@ -39,7 +37,6 @@ export const GameContext = createContext({} as GameContextProps);
 
 export function GameProvider({ children }: GameProviderProps) {
   const [players, setPlayers] = useState<Player[]>([]);
-  const [playerName, setPlayerName] = useState<string>("");
   const [initialLifes, setInitialLifes] = useState<number>(3);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -68,8 +65,6 @@ export function GameProvider({ children }: GameProviderProps) {
       ...previousPlayers,
       { name, lifes },
     ]);
-
-    setPlayerName("");
   }
 
   function changeLifes({
@@ -133,10 +128,8 @@ export function GameProvider({ children }: GameProviderProps) {
     <GameContext.Provider
       value={{
         players,
-        playerName,
         initialLifes,
         changeLifes,
-        setPlayerName,
         includePlayer,
         clearAllPlayers,
         setInitialLifes,

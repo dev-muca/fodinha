@@ -1,11 +1,13 @@
-import Input from "../UI/Input";
-import Button from "../UI/Button";
-import { ChangeEvent, useContext } from "react";
 import { GameContext } from "@/context/GameContext";
+import { ChangeEvent, useContext, useState } from "react";
+
+import Button from "../UI/Button";
+import Input from "../UI/Input";
 
 export default function Header() {
-  const { playerName, initialLifes, setPlayerName, includePlayer } =
-    useContext(GameContext);
+  const [playerName, setPlayerName] = useState<string>("");
+  const { initialLifes, includePlayer } = useContext(GameContext);
+
   return (
     <div className="w-full flex justify-center items-center gap-4 py-6 px-4">
       <Input
@@ -16,7 +18,10 @@ export default function Header() {
         }
       />
       <Button
-        onClick={() => includePlayer({ name: playerName, lifes: initialLifes })}
+        onClick={() => {
+          includePlayer({ name: playerName, lifes: initialLifes });
+          setPlayerName("");
+        }}
       >
         Adicionar
       </Button>

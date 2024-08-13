@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string | ReactNode;

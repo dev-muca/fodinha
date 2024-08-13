@@ -1,10 +1,9 @@
-import { twMerge } from "tailwind-merge";
-import { ChangeEvent, useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
-import Title from "@/components/Title";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PlayerCard from "@/components/PlayerCard";
-import Footer from "@/components/Footer";
+import Title from "@/components/Title";
 import { GameContext } from "@/context/GameContext";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { twMerge } from "tailwind-merge";
 import { TiHeartFullOutline } from "react-icons/ti";
+import { twMerge } from "tailwind-merge";
 
 import { GameContext } from "@/context/GameContext";
 
