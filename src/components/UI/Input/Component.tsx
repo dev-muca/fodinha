@@ -7,7 +7,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export default function Input({ className, ...props }: InputProps) {
   const defaultClass = twMerge(
-    "w-full border rounded px-2 py-1 outline-white text-white",
+    "w-full border rounded px-2 py-1 outline-white",
     className
   );
 

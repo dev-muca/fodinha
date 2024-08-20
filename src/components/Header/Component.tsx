@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 import Input from "../UI/Input";
 
 export default function Header() {
-  const [playerName, setPlayerName] = useState<string>("");
+  const [playerName, setPlayerName] = useState("");
   const { initialLifes, includePlayer } = useContext(GameContext);
 
   return (

@@ -37,7 +37,7 @@ export const GameContext = createContext({} as GameContextProps);
 
 export function GameProvider({ children }: GameProviderProps) {
   const [players, setPlayers] = useState<Player[]>([]);
-  const [initialLifes, setInitialLifes] = useState<number>(3);
+  const [initialLifes, setInitialLifes] = useState(3);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
