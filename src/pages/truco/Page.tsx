@@ -35,7 +35,19 @@ export default function Fodinha() {
           {theirAttemps}
         </h3>
       </div>
-      <div className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-8 px-8 mt-20 text-center text-white">
+      <div className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-8 px-8 mt-12 text-center text-white">
+        <Button
+          className="bg-inherit text-white opacity-30"
+          onClick={() => increaseAttemps({ who: "our", amount: -1 })}
+        >
+          -1
+        </Button>
+        <Button
+          className="bg-inherit text-white opacity-30"
+          onClick={() => increaseAttemps({ who: "their", amount: -1 })}
+        >
+          -1
+        </Button>
         <Button onClick={() => increaseAttemps({ who: "our", amount: 3 })}>
           Truco (+3){" "}
         </Button>
