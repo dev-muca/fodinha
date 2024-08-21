@@ -9,6 +9,7 @@ import Title from "@/components/Title";
 import { GameContext } from "@/context/GameContext";
 
 export default function Fodinha() {
+
   const { players } = useContext(GameContext);
   return (
     <>
