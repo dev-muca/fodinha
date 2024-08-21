@@ -21,8 +21,20 @@ export default function useTruco() {
   }
 
   function increaseAttemps({ who, amount }: { who: string; amount: number }) {
-    if (who === "our") setOurAttemps((prevAttemps) => prevAttemps + amount);
-    if (who === "their") setTheirAttemps((prevAttemps) => prevAttemps + amount);
+    if (who === "our") {
+      setOurAttemps((currenteAttempsValue) => {
+        return !currenteAttempsValue && amount == -1
+        ? currenteAttempsValue
+        : currenteAttempsValue + amount;
+      })
+    }
+    if (who === "their") {
+      setTheirAttemps((currenteAttempsValue) => {
+        return !currenteAttempsValue && amount == -1
+        ? currenteAttempsValue
+        : currenteAttempsValue + amount;
+      })
+    }
     return;
   }
 

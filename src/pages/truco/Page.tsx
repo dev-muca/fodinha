@@ -3,11 +3,13 @@ import { twMerge } from "tailwind-merge";
 import Menu from "@/components/Menu";
 import Title from "@/components/Title";
 import Button from "@/components/UI/Button";
-
+import useNoSleep from "../truco/hooks/useNoSleep";
 import useTruco from "./hooks/useTruco";
 
 export default function Fodinha() {
   const { ourAttemps, theirAttemps, increaseAttemps } = useTruco();
+
+  useNoSleep();
 
   return (
     <>
