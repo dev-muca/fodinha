@@ -24,13 +24,13 @@ export default function Fodinha() {
       amount: -1,
     },
     {
-      className: "bg-inherit text-white",
+      className: "bg-inherit bg-white",
       text: "Truco (+3)",
       who: "our",
       amount: 3,
     },
     {
-      className: "bg-inherit text-white",
+      className: "bg-inherit bg-white",
       text: "Truco (+3)",
       who: "their",
       amount: 3,
